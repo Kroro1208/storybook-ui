@@ -1,8 +1,11 @@
+import type { ComponentProps } from "react"
 
-const Button = () => {
+type ButtonProps = ComponentProps<"button">;
+
+const Button = ({...props }: ButtonProps) => {
   return (
-    <button type="button" className="px-4 py-3 rounded-lg bg-blue-500 text-white">
-      ボタンコンポーネント
+    <button className="px-4 py-2 rounded-full bg-green-500 text-white" {...props}>
+        Button
     </button>
   )
 }
